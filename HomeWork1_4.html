@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Введите сумму кредита');
+    let i = +prompt('Введите процентную ставку');
+    let b = +prompt('Длительность кредита в месяцах');
+    let p = Math.ceil(a*((i*0.01)*b));
+    let s = Math.ceil(a*((i*0.01)*12));
+    let sum = a+(a*((i*0.01)*b));
+    document.write('Сумма выплаты за всё время ' + p + " грн.");
+    document.write('Сумма процентов за один календарный год составит '+ s + ' грн.');
+    document.write('Общее колличество денежных средств '+ sum + ' грн.');
+
+</script>
+
+</body>
+</html>
