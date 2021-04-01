@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let ingridients =[
+        {
+            titel:'milk',
+        protein:40.5,
+        fat:40,
+        carbohydrates:18.8,
+        vitamin:3,
+        },{
+        titel:'peper',
+            protein: 30.1,
+            fat:7.3,
+            carbohydrates: 13,
+            vitamin: 6,
+        },{
+        titel:'meat',
+            protein: 80.1,
+            fat:32,
+            carbohydrates: 11,
+            vitamin: 5,
+
+        },{
+        titel:'agg',
+            protein: 70.1,
+            fat:3,
+            carbohydrates: 18,
+            vitamin: 6,
+
+        }
+
+    ]
+    let dishes=[
+        {
+            titel: 'Амлет',
+            gram: 300,
+            ingridients:[
+                { ingridients: 0,
+                gram:200,
+                },{ ingridients: 3,
+                    gram: 100,
+                }
+
+            ]
+        },{
+            titel: 'Котлеты',
+            gram:800,
+            ingridients:[
+                {
+                ingridients: 1,
+                    gram:220,
+                },{ingridients: 2,
+                    gram:150,
+                },{ingridients: 3,
+                    gram: 80,
+
+                },{
+                titel:'Фаршированный перец',
+                    ingridients: [
+                        {ingridients: 1,
+                        gram:80,
+                        },{
+                    ingridients: 2,
+                            gram: 900,
+                        },{
+                    ingridients: 3,
+                            gram: 200,
+                        }
+                    ]
+
+                }
+            ]
+
+        }
+    ]
+    for (let i = 0;i < dishes.length;i++){
+        let proteinAll = 0;
+        for (let j = 0;j < dishes[i].ingridients.length;j++){
+            let gram = dishes[i].ingridients[j].gram;
+            let index = dishes[i].ingridients[j].ingridients;
+            let protein = ingridients[index].protein;
+            proteinAll += Math.floor((100/protein) * gram);
+
+        }
+        console.log(dishes[i].titel,proteinAll);
+    }
+
+</script>
+</body>
+</html>
